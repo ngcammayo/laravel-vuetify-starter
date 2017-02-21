@@ -22,7 +22,7 @@
     </script>
 </head>
 <body>
-<v-app id="app" top-toolbar footer>
+<v-app id="app" top-toolbar footer v-cloak>
     <v-toolbar>
         <v-toolbar-title>
             {{ config('app.name', 'Laravel') }}
@@ -61,6 +61,7 @@
     <main>
         <v-content>
             <v-container fluid>
+                @yield('content')
             </v-container>
         </v-content>
     </main>
